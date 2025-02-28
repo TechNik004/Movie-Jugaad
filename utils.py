@@ -598,32 +598,32 @@ async def check_verification(bot, userid):
     else:
         return False  
     
-async def send_all(bot, userid, files, ident, chat_id, user_name, query):
-    settings = await get_settings(chat_id)
-    if 'is_shortlink' in settings.keys():
-        ENABLE_SHORTLINK = settings['is_shortlink']
-    else:
-        await save_group_settings(message.chat.id, 'is_shortlink', False)
-        ENABLE_SHORTLINK = False
-    try:
-        if ENABLE_SHORTLINK:
-            for file in files:
-                title = file["file_name"]
-                size = get_size(file["file_size"])
-                if not await db.has_premium_access(userid) and SHORTLINK_MODE == True:
-                    await bot.send_message(chat_id=userid, text=f"<b>Hᴇʏ ᴛʜᴇʀᴇ {user_name} 👋🏽 \n\n✅ Sᴇᴄᴜʀᴇ ʟɪɴᴋ ᴛᴏ ʏᴏᴜʀ ғɪʟᴇ ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ʙᴇᴇɴ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ\n\n🗃️ Fɪʟᴇ Nᴀᴍᴇ : {title}\n🔖 Fɪʟᴇ Sɪᴢᴇ : {size}</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📤 Dᴏᴡɴʟᴏᴀᴅ 📥", url=await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=files_{file['file_id']}"))]]))
-        else:
-            for file in files:
-                f_caption = file["caption"]
-                title = file["file_name"]
-                size = get_size(file["file_size"])
-                if CUSTOM_FILE_CAPTION:
-                    try:
-                        f_caption = CUSTOM_FILE_CAPTION.format(
-                            file_name='' if title is None else title,
-                            file_size='' if size is None else size,
-                            file_caption='' if f_caption is None else f_caption
-                        )
+#async def send_all(bot, userid, files, ident, chat_id, user_name, query):
+    #settings = await get_settings(chat_id)
+   # if 'is_shortlink' in settings.keys():
+      #  ENABLE_SHORTLINK = settings['is_shortlink']
+ #   else:
+    #    await save_group_settings(message.chat.id, 'is_shortlink', False)
+     #   ENABLE_SHORTLINK = False
+  #  try:
+   #     if ENABLE_SHORTLINK:
+    #        for file in files:
+      #          title = file["file_name"]
+      #          size = get_size(file["file_size"])
+      #          if not await db.has_premium_access(userid) and SHORTLINK_MODE == True:
+       #             await bot.send_message(chat_id=userid, text=f"<b>Hᴇʏ ᴛʜᴇʀᴇ {user_name} 👋🏽 \n\n✅ Sᴇᴄᴜʀᴇ ʟɪɴᴋ ᴛᴏ ʏᴏᴜʀ ғɪʟᴇ ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ʙᴇᴇɴ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ\n\n🗃️ Fɪʟᴇ Nᴀᴍᴇ : {title}\n🔖 Fɪʟᴇ Sɪᴢᴇ : {size}</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📤 Dᴏᴡɴʟᴏᴀᴅ 📥", url=await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=files_{file['file_id']}"))]]))
+     #   else:
+     #       for file in files:
+     #           f_caption = file["caption"]
+     #           title = file["file_name"]
+      #          size = get_size(file["file_size"])
+        #        if CUSTOM_FILE_CAPTION:
+           #         try:
+           #             f_caption = CUSTOM_FILE_CAPTION.format(
+           #                 file_name='' if title is None else title,
+           #                 file_size='' if size is None else size,
+           #                 file_caption='' if f_caption is None else f_caption
+          #              )
                     except Exception as e:
                         print(e)
                         f_caption = f_caption
