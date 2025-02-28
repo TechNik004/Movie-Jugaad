@@ -112,7 +112,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 
 # Token Verification Info :
-VERIFY = bool(environ.get('VERIFY', True))
+VERIFY = bool(environ.get('VERIFY', 'True'), True)
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'publicearn.com')
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '3799ed9499671191f206f84272385f68a61f82e7')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/newewwwwwwww/10')
