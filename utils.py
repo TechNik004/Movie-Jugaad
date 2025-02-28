@@ -624,25 +624,25 @@ async def check_verification(bot, userid):
            #                 file_size='' if size is None else size,
            #                 file_caption='' if f_caption is None else f_caption
           #              )
-                    except Exception as e:
-                        print(e)
-                        f_caption = f_caption
-                if f_caption is None:
-                    f_caption = f"{title}"
-                await bot.send_cached_media(
-                    chat_id=userid,
-                    file_id=file["file_id"],
-                    caption=f_caption,
-                    protect_content=True if ident == "filep" else False,
-                    reply_markup=InlineKeyboardMarkup(
-                        [[
-                            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                        ],[
-                            InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
-                        ]]
-                    )
-                )
+                   # except Exception as e:
+                   #     print(e)
+                  #      f_caption = f_caption
+              #  if f_caption is None:
+             #       f_caption = f"{title}"
+             #   await bot.send_cached_media(
+             #       chat_id=userid,
+             #       file_id=file["file_id"],
+              #      caption=f_caption,
+              #      protect_content=True if ident == "filep" else False,
+               #     reply_markup=InlineKeyboardMarkup(
+                #        [[
+               #             InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                #            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                #        ],[
+                  #          InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
+                #        ]]
+                 #   )
+                #)
     except UserIsBlocked:
         await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
     except PeerIdInvalid:
