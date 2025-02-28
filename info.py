@@ -41,7 +41,7 @@ auth_channel = environ.get('AUTH_CHANNEL', '-1002340964308') # give your force s
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # This Channel Is For When User Request Any File Name With command or hashtag like - /request or #request
-reqst_channel = environ.get('REQST_CHANNEL', '')
+reqst_channel = environ.get('REQST_CHANNEL', '-1002429585037')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 
 # This Channel Is For Index Request 
@@ -112,16 +112,16 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 
 # Token Verification Info :
-VERIFY = bool(environ.get('VERIFY', True))
-VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'publicearn.com')
-VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '3799ed9499671191f206f84272385f68a61f82e7')
+VERIFY = bool(environ.get('VERIFY', False))
+VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', '')
+VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/newewwwwwwww/10')
 
 # If You Fill Second Shortner Then Bot Attach Both First And Second Shortner And Use It For Verify.
-VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', False))
+VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', True))
 # if verify second shortner is True then fill below url and api
-VERIFY_SND_SHORTLINK_URL = environ.get('VERIFY_SND_SHORTLINK_URL', '')
-VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '')
+VERIFY_SND_SHORTLINK_URL = environ.get('VERIFY_SND_SHORTLINK_URL', 'publicearn.com')
+VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '3799ed9499671191f206f84272385f68a61f82e7')
 
 
 # Shortlink Info
