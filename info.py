@@ -154,7 +154,7 @@ YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998",
 
 
 # Online Stream and Download
-STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or False
+STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or False
 
 # If Stream Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 MULTI_CLIENT = False
@@ -164,7 +164,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://ugly-carri-trexowner-3c7ad7a2.koyeb.app/")
+URL = environ.get("URL", "https://thor2-o-bot.onrender.com/")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
