@@ -2594,17 +2594,15 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
     temp.GETALL[key] = files
     temp.SHORT[message.from_user.id] = message.chat.id
     if settings["button"]:
-       from pyrogram.types import InlineKeyboardButton
-
-btn = [
-    InlineKeyboardButton(
-        text=f"[{get_size(file['file_size'])}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file['file_name'].split()))}",
-        callback_data=f'{pre}#{file["file_id"]}'
-    )
-    for file in files if "file_id" in file
+        btn = [
+            [
+                InlineKeyboardButton(
+                     text=f"[{get_size(file['file_size'])}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file['file_name'].split()))}", callback_data=f'{pre}#{file["file_id"]}'
+                ),
+            ]    
+    for file in files 
 ]
-
-        btn.insert(0, 
+btn.insert(0, 
             [
                 InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
                 InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
