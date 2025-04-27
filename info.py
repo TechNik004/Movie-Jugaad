@@ -113,7 +113,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 VERIFY = bool(environ.get('VERIFY', True))
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'linkshortify.com')
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '53229e400eba26696058cd2640bd120261864a01')
-VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/newewwwwwwww/10')
+VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/TrexOfficialss/1282')
 
 # If You Fill Second Shortner Then Bot Attach Both First And Second Shortner And Use It For Verify.
 VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', False))
