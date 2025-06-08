@@ -110,7 +110,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 
 # Token Verification Info :
-VERIFY = bool(environ.get('VERIFY', False))
+VERIFY = bool(environ.get('VERIFY', True))
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'linkshortify.com')
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '53229e400eba26696058cd2640bd120261864a01')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/TrexOfficialss/1282')
