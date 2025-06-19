@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://envs.sh/TME.jpg" alt="THOR-Filter-Bot Logo">
+  <img src="" alt="THOR-Filter-Bot Logo">
 </p>
 <h1 align="center">
-  VJ FILTER BOT
+  MOVIE FILTER BOT
 </h1>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+THOR+Filter+Bot!)
