@@ -3,7 +3,7 @@
 class script(object):
     START_TXT = """<b><blockquote>ʜᴇʟʟᴏ {} 👋,</blockquote>
     
-Mʏ Nᴀᴍᴇ Is THOR ⚡️, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs, Jᴜsᴛ send me a Movie Name Aɴᴅ Eɴᴊᴏʏ 😍 </b>"""
+Mʏ Nᴀᴍᴇ Is MOVIE JUGAAD BOT, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs, Jᴜsᴛ send me a Movie Name Aɴᴅ Eɴᴊᴏʏ 😍 </b>"""
 
     CLONE_START_TXT = """<b><blockquote>ʜᴇʟʟᴏ {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a></blockquote>
     
