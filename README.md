@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" alt="THOR-Filter-Bot Logo">
+  <img src="https://envs.sh/4ib.jpg" alt="Movie-Filter-Bot Logo">
 </p>
 <h1 align="center">
   MOVIE FILTER BOT
